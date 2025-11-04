@@ -4,7 +4,6 @@ pydantic>=2.7
 openai>=1.40
 langgraph>=0.2.38
 langchain-core>=0.3.0
-.gitignore
 .venv/
 __pycache__/
 .env
