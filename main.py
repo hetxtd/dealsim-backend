@@ -11,7 +11,7 @@ app = FastAPI(title="DealSim API")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://frontend-git-main-nasirs-projects-51b6d1bf.vercel.app",  # your Vercel live site
+        "https://frontend-nl5leyu1y-nasirs-projects-51b6d1bf.vercel.app",  # your Vercel live site
         "http://localhost:3000",  # for local dev
     ],
     allow_credentials=False,
