@@ -8,14 +8,17 @@ import os, traceback
 
 app = FastAPI(title="DealSim API")
 
-# Allow Next.js (localhost:3000) to call FastAPI (localhost:8000)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],          # for local dev; tighten in prod
-    allow_credentials=True,
+    allow_origins=[
+        "https://dealsim.vercel.app",  # your Vercel live site
+        "http://localhost:3000",  # for local dev
+    ],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 # Build the graph once at startup
 graph = build_graph()
