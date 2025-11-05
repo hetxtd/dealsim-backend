@@ -11,13 +11,15 @@ app = FastAPI(title="DealSim API")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://dealsim-frontend.vercel.app",  # your Vercel live site
-        "http://localhost:3000",  # for local dev
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+        "https://dealsim-frontend.vercel.app",
     ],
     allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 
 # Build the graph once at startup
